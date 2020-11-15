@@ -64,8 +64,8 @@ def retrieve_infos():
 tracks = retrieve_infos()
 logging.info(f"Retrieved {len(tracks)} tracks. Starting download.")
 
-urls = list(map(lambda i: i['permalink_url'], infos))
+urls = list(map(lambda i: i['permalink_url'], tracks))
 
-ydl.download(urls[0:10])
+ydl.download(urls)
 
 logging.info("Finished downloading.")
